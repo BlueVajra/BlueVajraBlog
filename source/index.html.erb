@@ -1,0 +1,38 @@
+---
+pageable: true
+per_page: 10
+---
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<% page_articles.each_with_index do |article, i| %>
+<aside class="metaInfo">
+<h3><%= article.date.strftime('%b %e') %></h3>
+</aside>
+<!--aside class="metaImage">
+<img src="<%= lorem.image('300x400', :background_color => '333', :color => 'fff')%>" alt="Placeholder">
+</aside-->  
+<article>
+<blockquote>
+  Text Goes Here, but not sure how
+  </blockquote>
+<section>
+  <h2><%= link_to article.title, article %></h2>
+  <!-- use article.summary(250) if you have Nokogiri available to show just
+       the first 250 characters -->
+  <%= article.body %>
+  </section>
+  
+  </article>
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <p><%= link_to 'Next page', next_page %></p>
+  <% end %>
+<% end %>
