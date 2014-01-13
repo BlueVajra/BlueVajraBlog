@@ -78,6 +78,8 @@ page "/feed.xml", layout: false
 #     "Helping"
 #   end
 # end
+activate :directory_indexes
+set :build_dir, "tmp"
 
 set :css_dir, 'stylesheets'
 
