@@ -12,16 +12,25 @@
   <div class="headerContainer">
     <header>
       <h1>Blue Vajra</h1>
-      <h2>My Digital Playground for All Things Me. Buddhism, Tibetan, Martial Arts, Coding, and Coffee.</h2>
+      
     </header>
     </div>
 
     <div class="contentContainer">
-      <%= yield %>
+      <section class="mainContent">
+        <%= yield %>
+      </section>
+      <aside class="sideContent">
+        <h2>Welcome to...</h2>
+        <p>My Digital Playground for All Things Me. Buddhism, Tibetan, Martial Arts, Coding, and Coffee.</p>
+        <blockquote>
+          Getting through the day, one espresso at a time.
+        </blockquote>
+      </aside>
     </div>
-    
+
     <div class="footerContainer">
-    <footer class="recent">
+    <footer>
     <section>
       <h2>Recent Articles</h2>
       <ol>

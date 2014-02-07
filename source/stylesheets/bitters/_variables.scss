@@ -1,10 +1,15 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif: $helvetica;
+
+//@include web-font((Lato, Open Sans), (italic bolditalic bold, i), (latin, cyrillic), ('thisismytext'), (shadow multiple, float 3d), true);
+@include web-font((Lato), (300 400 900, 1));
+
+$sans-serif: 'Lato', $helvetica;
 $serif: $georgia;
 
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
+//$header-font-family: 'Lato', sans-serif;
 
 // Sizes
 ///////////////////////////////////////////////////////////////////////////////

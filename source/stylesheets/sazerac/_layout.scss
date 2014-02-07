@@ -4,18 +4,19 @@ html{
 
 	}
 	@include media($small-screen) {
-		font-size: 81.25%;
+		font-size: 71.25%;
 		//$base-font-size:.6em;	
 	}
 }
 
 .headerContainer {
+	text-align:center;
 	//@include fill-parent();
 	
 
 	//@include background(url("../img/circles-seamless-pattern-1458.png"), linear-gradient(orange, red));
 	//@include background(linear-gradient(orange, red));
-	background-color:#336699;
+	//background-color:#336699;
 	margin-bottom: 1rem;
 	padding-bottom:10px;
 
@@ -43,41 +44,43 @@ header{
 div.contentContainer{
 	@include outer-container();
 
-}
-div#main {
-	//@include outer-container();
-	//@include span-columns(12);
-	//@include pad();
-}
-aside.metaInfo{
-	@include span-columns(2);
-}
-article{
-	@include span-columns(10);
-	@include omega();
+	section.mainContent{
+		@include span-columns(9);
+		article{
+		h2{
+			@include span-columns(6 of 9);
+			@include shift(3)
+		}
+		aside{
+			@include span-columns(3 of 9);
+			@include shift(-9)
+		}
+		section{
+			@include span-columns(6 of 9);
+			@include shift(3)
+		}
 
-	section{
-		@include span-columns(7 of 10);
-		@include shift(-10);
 	}
-	blockquote{
-		@include span-columns(3 of 10);
-		@include shift(7);
 	}
+	aside.sideContent{
+		@include span-columns(3);
+		@include omega();
+	}
+	
+
+
 }
 
-aside.metaImage {
-	//@include span-columns(3);
-	//@include shift(9);
-	//@include omega();
-}
+
 
 .footerContainer{
 	//@include fill-parent();
-	background-color:#aaaaaa;
+	background-color:#2b303b;
+	color:#c0c5ce;
 	
 }
 footer{
+	@include pad();
 	@include outer-container();
 	section{
 		@include span-columns(4);
