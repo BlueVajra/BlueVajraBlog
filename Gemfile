@@ -6,6 +6,7 @@ ruby "2.0.0"
 
 gem "middleman", "~> 3.2.1"
 gem "middleman-blog", "~> 3.5.1"
+gem "middleman-syntax"
 gem "sass"
 gem "bourbon"
 gem "neat"
@@ -14,3 +15,4 @@ gem "builder", "~> 3.0"
 gem "nokogiri"
 gem "rack-contrib"
 gem "puma"
+

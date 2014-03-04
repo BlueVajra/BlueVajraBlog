@@ -71,6 +71,8 @@ page "/feed.xml", layout: false
 
 # Reload the browser automatically whenever files change
 # activate :livereload
+activate :syntax
+set :markdown_engine, :kramdown
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -86,6 +88,8 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+
 
 # Build-specific configuration
 configure :build do
@@ -103,4 +107,6 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  
 end
