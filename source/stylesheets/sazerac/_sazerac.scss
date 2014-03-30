@@ -36,23 +36,27 @@ article{
       .day{
         display:block;
         position:absolute;
-        left:5px;
+        width:50px;
+        left:-10px;
         top:0px;
         font-weight:900;
         font-size:1.5em;
-        text-align:center;
+        text-align:right;
       }
       .month{
         display:block;
         position:absolute;
+        width:50px;
+        left:-10px;
         text-transform:uppercase;
         top:25px;
-        text-align:center;
+        text-align:right;
       }
       .year{
         display:block;
         position:absolute;
         //right:15px;
+        color:#c0c5ce;
         left:27px;
         top:11px;
         font-weight:100;
