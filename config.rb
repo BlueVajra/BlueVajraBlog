@@ -89,7 +89,10 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-
+# Activate Disqus extension
+activate :disqus do |d|
+  d.shortname = "bluevajra"
+  end
 
 # Build-specific configuration
 configure :build do

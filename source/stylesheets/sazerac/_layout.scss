@@ -44,33 +44,29 @@ header{
 div.contentContainer{
 	@include outer-container();
 
-	section.mainContent{
-		@include span-columns(9);
-		article{
-		h2{
-			@include span-columns(6 of 9);
-			@include shift(3)
-		}
-		aside{
-			@include span-columns(3 of 9);
-			@include shift(-9)
-		}
-		section{
-			@include span-columns(6 of 9);
-			@include shift(3)
-		}
-
-	}
-	}
-	aside.sideContent{
-		@include span-columns(3);
-		@include omega();
-	}
-	
-
-
 }
+section.mainContent {
+  @include span-columns(9);
+  article {
+    h2 {
+      @include span-columns(6 of 9);
+      @include shift(3)
+    }
+    aside {
+      @include span-columns(3 of 9);
+      @include shift(-9)
+    }
+    section {
+      @include span-columns(6 of 9);
+      @include shift(3)
+    }
 
+  }
+}
+aside.sideContent{
+  @include span-columns(3);
+  @include omega();
+}
 
 
 .footerContainer{

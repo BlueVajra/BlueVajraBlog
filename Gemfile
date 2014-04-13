@@ -15,4 +15,6 @@ gem "builder", "~> 3.0"
 gem "nokogiri"
 gem "rack-contrib"
 gem "puma"
+gem 'middleman-disqus', '~> 0.0.3'
+
 
