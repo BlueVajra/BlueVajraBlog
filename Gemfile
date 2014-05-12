@@ -2,7 +2,7 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-ruby "2.0.0"
+ruby "2.1.1"
 
 gem "middleman", "~> 3.2.1"
 gem "middleman-blog", "~> 3.5.1"
