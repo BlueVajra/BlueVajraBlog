@@ -1,87 +1,157 @@
-html{
-	@include media($medium-screen) {
-		font-size: 87.5%;
-
-	}
-	@include media($small-screen) {
-		font-size: 71.25%;
-		//$base-font-size:.6em;	
-	}
-}
+//html{
+//  @include media($large-screen) {
+//    font-size: 100%;
+//
+//  }
+//	@include media($medium-screen) {
+//		font-size: 87.5%;
+//
+//	}
+//	@include media($small-screen) {
+//		font-size: 71.25%;
+//	}
+//}
 
 .headerContainer {
-	text-align:center;
-	//@include fill-parent();
-	
-
-	//@include background(url("../img/circles-seamless-pattern-1458.png"), linear-gradient(orange, red));
-	//@include background(linear-gradient(orange, red));
-	//background-color:#336699;
-	margin-bottom: 1rem;
-	padding-bottom:10px;
-
-}
-header{
-	//@include span-columns(12);
-	@include outer-container();
-	//@include pad();
-	//@include omega();
-	//@include fill-parent();
-	
-	//@include background-image(linear-gradient( hsla(0, 100%, 100%, 0.08) 50%, transparent 50%), linear-gradient(orange, red) 50%,transparent 50%);
-	margin-bottom: 1rem;
-
-
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 10px;
 }
 
-#bodyContainer{
-	//@include fill-parent();
-	//@include outer-container();
-	//@include pad();
+div.contentContainer {
+  @include clearfix;
+  padding: 0 1em;
 }
 
-
-div.contentContainer{
-	@include outer-container();
-
-}
 section.mainContent {
-  @include span-columns(9);
-  article {
-    h2 {
-      @include span-columns(6 of 9);
-      @include shift(3)
+  @include outer-container();
+
+  aside.sideContent {
+    display: none;
+  }
+
+  @include media($large-screen) {
+
+    article {
+      @include span-columns(9);
     }
-    aside {
-      @include span-columns(3 of 9);
-      @include shift(-9)
+
+    .articles, .contact, .blog_article {
+      @include span-columns(9);
     }
-    section {
-      @include span-columns(6 of 9);
-      @include shift(3)
+
+    aside.sideContent {
+      @include span-columns(3);
+      @include omega();
     }
 
   }
 }
-aside.sideContent{
-  @include span-columns(3);
-  @include omega();
-}
+
+.contact {
+  padding-top: 2em;
+  & > * {
+    @include span-columns(7 of 9);
+    @include shift(1)
+  }
+  .media{
+    margin-top:2em;
+    .gravitar{
+      @include span-columns(2 of 7);
+      width:4em;
+    }
+    p{
+      @include span-columns(5 of 7);
+      font-size:1.2em;
+      line-height: 1.5em;
+    }
+  }
 
 
-.footerContainer{
-	//@include fill-parent();
-	background-color:#2b303b;
-	color:#c0c5ce;
-	
+
+  ul {
+    padding-left:0;
+
+    margin:3em auto;
+    overflow: hidden;
+    text-align:center;
+
+    li {
+      list-style: none;
+      display: inline;
+      font-size:3em;
+      padding:0 .3em;
+
+    }
+  }
+
 }
-footer{
-	@include pad();
-	@include outer-container();
-	section{
-		@include span-columns(4);
-	}
-	//@include outer-container();
-	//@include span-columns(12);
+
+.articles, .blog_article {
+  padding-top: 2em;
+  time {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .05);
+    padding: .1em .2em;
+  }
+  .day, .month, .year {
+    color: slategray;
+  }
+  .day:after {
+    content: ' ';
+  }
+  .month:after {
+    content: ', ';
+  }
+  .blog, article {
+    line-height: 1.4em;
+  }
+
+  .blog, .blog_list, article {
+    font-size: 1.2em;
+    @include media($large-screen) {
+      @include span-columns(7 of 9);
+      @include shift(1)
+    }
+  }
+}
+
+.articles .blog_list {
+  ul {
+    padding-left: 0;
+    border-top: 1px solid #0D4383;
+    margin-top: 1em;
+  }
+  li {
+    border-bottom: 1px solid #EBEFF2;
+    padding: .5em 0;
+    list-style: none;
+    span {
+      display: inline-block;
+      width: 4em;
+    }
+  }
+}
+
+.footerContainer {
+  background-color: #2b303b;
+  color: #c0c5ce;
+  @include pad();
+}
+
+footer {
+
+  @include outer-container();
+  section {
+    @include span-columns(4);
+    text-align: left;
+  }
+  @include media($large-screen) {
+    section {
+      @include span-columns(4);
+      text-align: left;
+    }
+  }
+
 }
 

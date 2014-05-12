@@ -1,6 +1,6 @@
-<div class="blog_main">
+<div class="articles">
   <% article = blog.articles[0] %>
-  <article>
+  <div class="blog">
     <h2><a href="<%= article.url %>"><%= article.title %></a></h2>
     <aside>
       <time>
@@ -11,15 +11,12 @@
       <%= article.summary(350) %>
       <p><a href="<%= article.url %>">Read more.</a></p>
     </section>
-  </article>
+  </div>
+  <div class="blog_list">
+    <ul>
+      <% blog.articles[1...blog.articles.length].each do |article| %>
+        <li><span><%= article.date.strftime('%b %e') %></span><%= link_to article.title, article %></li>
+      <% end %>
+    </ul>
+  </div>
 </div>
-
-<div class="blog_secondary">
-  <ul>
-    <% blog.articles[1...9].each do |article| %>
-      <li><span><%= article.date.strftime('%b %e') %></span><%= link_to article.title, article %></li>
-    <% end %>
-  </ul>
-</div>
-
-

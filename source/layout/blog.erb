@@ -1,10 +1,16 @@
 <% wrap_layout :layout do %>
-  <article>
-    <h2><%= current_page.title %></h2>
-    <aside><time><span class="day"><%= current_page.date.strftime('%d') %></span><span class="month"><%= current_page.date.strftime('%b') %></span><span class="year"><%= current_page.date.strftime('%Y') %></span></time></aside>
-    <section>
-      <%= yield %>
-    </section>
-    <section class=""disqus"><%= disqus %></section>
-  </article>
+  <div class="blog_article">
+    <article>
+      <h2><%= current_page.title %></h2>
+      <aside>
+        <time>
+          <span class="day"><%= current_page.date.strftime('%d') %></span><span class="month"><%= current_page.date.strftime('%b') %></span><span class="year"><%= current_page.date.strftime('%Y') %></span>
+        </time>
+      </aside>
+      <section>
+        <%= yield %>
+      </section>
+      <section class="disqus"><%= disqus %></section>
+    </article>
+  </div>
 <% end %>

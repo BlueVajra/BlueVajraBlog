@@ -8,23 +8,25 @@
   <%= stylesheet_link_tag "style" %>
   <%= stylesheet_link_tag "code" %>
   <%= javascript_include_tag 'scripts' %>
-</head>
-<body>
+ </head>
+<body id="home">
 <%= partial "header" %>
 
-<div class="contentContainer">
-  <section class="mainContent">
+<div class="contentContainer blogs">
+
+  <section class="blogContent">
+    <h2>Blog</h2>
     <%= yield %>
-    <aside class="sideContent">
-      <blockquote>
-        MINASWAN - Mats is nice and so we are nice.
-      </blockquote>
-      <%= partial "twitter" %>
-    </aside>
+  </section>
+</div>
+
+<div class="contentContainer projects">
+  <section class="projectContent">
+    <h2>Projects</h2>
+    <%= partial "project_cards" %>
   </section>
 </div>
 
 <%= partial "footer" %>
-
 </body>
 </html>

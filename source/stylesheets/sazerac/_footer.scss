@@ -1,0 +1,51 @@
+footer section{
+
+}
+
+
+footer ul{
+  padding-left:0;
+  li{
+    list-style:none;
+    padding-left:0;
+  }
+
+
+}
+
+footer ul.social{
+  li {
+
+    position: relative;
+    padding-left:1.5em;
+  }
+  li a:before {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    position: absolute;
+    /*adjust as necessary*/
+    top: 2px;
+    left: 2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  li a[href*="twitter"]:before{
+    content: $fa-var-twitter;
+  }
+  li a[href*="facebook"]:before{
+    content: $fa-var-facebook;
+  }
+  li a[href*="linked"]:before{
+    content: $fa-var-linkedin;
+  }
+  li a[href*="xml"]:before{
+    content: $fa-var-rss;
+  }
+  li a[href*="github"]:before{
+    content: $fa-var-github;
+  }
+
+
+}
