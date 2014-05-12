@@ -1,0 +1,147 @@
+.contentContainer {
+}
+
+.contentContainer.blogs {
+  @include linear-gradient(#EBEFF2, #eeeeee);
+  border-top: 1px solid #555555;
+  border-bottom: 1px solid #9a9a9a;
+  padding: 1em;
+}
+
+.contentContainer.projects {
+  //  background-color: #ffffff;
+  background: #ffffff url(/images/bg/crossword.png) repeat;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  padding: 1em;
+}
+
+.contentContainer > section > h2 {
+  font-size: 5em;
+  font-weight: 900;
+  text-align: left;
+  color: rgba(137, 150, 164, .6);
+//  color:#7888A9;
+  text-transform: upcase;
+}
+
+section.projectContent {
+  @include outer-container();
+}
+
+section.blogContent {
+  @include outer-container();
+
+  .blog_main {
+
+    @include media($large-screen) {
+      @include span-columns(6);
+
+      h2, section {
+        @include span-columns(5 of 6);
+        @include shift(1)
+      }
+      aside {
+        @include span-columns(1 of 6);
+        @include shift(-6);
+        font-family: 'Lato';
+        color: #2b303b;
+        font-size: 1.25em;
+        line-height: 1.25em;
+        text-align: right;
+        padding-top: .75em;
+
+        //@include transform(translateY(50px));
+      }
+      time {
+        position: relative;
+        float: right;
+        margin-right: 60px;
+        top: -5px;
+        .day {
+          display: block;
+          position: absolute;
+          width: 50px;
+          left: -10px;
+          top: 0px;
+          font-weight: 900;
+          font-size: 1.5em;
+          text-align: right;
+        }
+        .month {
+          display: block;
+          position: absolute;
+          width: 50px;
+          left: -10px;
+          text-transform: uppercase;
+          top: 25px;
+          text-align: right;
+        }
+        .year {
+          display: block;
+          position: absolute;
+          //right:15px;
+          color: #c0c5ce;
+          left: 27px;
+          top: 11px;
+          font-weight: 100;
+          @include transform(rotate(-90deg));
+        }
+      }
+    }
+    @include media(max-width $large-screen) {
+      time{
+        border-radius:3px;
+        background-color: rgba(0,0,0,.1);
+        padding:.1em .2em;
+      }
+      .day, .month, .year {
+        color: slategray;
+      }
+      .day:after {
+        content: ' ';
+      }
+      .month:after {
+        content: ', ';
+      }
+
+    }
+
+  }
+  .blog_secondary {
+    @include clearfix;
+    @include media($large-screen) {
+      @include span-columns(6);
+    }
+    font-size: 1.2em;
+    ul {
+      padding-left: 0;
+    }
+    li {
+      list-style: none;
+    }
+    li + li {
+      margin-top: 1px;
+
+    }
+    li a {
+      display: block;
+      background-color: rgba(0, 0, 0, .05);
+      color: #0D4383;
+      margin-left: 4.5em;
+      padding: .3em;
+    }
+    li a:hover {
+      background-color: rgba(0, 0, 0, .1);
+    }
+    li span {
+      display: block;
+      background-color:  #93A0B8;;
+      color: #eeeeee;
+      width: 4.5em;
+      float: left;
+      padding: .3em;
+      padding-left: .5em;
+    }
+  }
+}

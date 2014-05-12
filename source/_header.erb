@@ -1,0 +1,41 @@
+<header class="navigation">
+  <div class="menu-wrapper">
+    <a href="/" class="logo">
+      <i class="fa fa-code"></i>Blue Vajra
+    </a>
+    <p class="navigation-menu-button" id="js-mobile-menu">MENU</p>
+    <div class="nav">
+      <ul id="navigation-menu">
+        <li><a href="/blogs/">Blogs</a></li>
+        <li><a href="/about/">About Me</a></li>
+      </ul>
+    </div>
+    <div class="navigation-tools">
+      <ul id="social-menu">
+        <li><a href="https://github.com/BlueVajra"><i class="fa fa-github-square"></i></a></li>
+        <li><a href="https://twitter.com/bluevajra"><i class="fa fa-twitter-square"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/coryleistikow"><i class="fa fa-linkedin-square"></i></a></li>
+        <li><a href="http://www.bluevajra.com/feed.xml"><i class="fa fa-rss-square"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(function() {
+    var menu = $('#navigation-menu');
+    var menuToggle = $('#js-mobile-menu');
+    var signUp = $('.sign-up');
+
+    $(menuToggle).on('click', function(e) {
+      e.preventDefault();
+      menu.slideToggle(function(){
+        if(menu.is(':hidden')) {
+          menu.removeAttr('style');
+        }
+      });
+    });
+
+
+  });
+</script>

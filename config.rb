@@ -30,7 +30,7 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
-page "/feed.xml", layout: false
+
 
 ###
 # Compass
@@ -58,6 +58,10 @@ page "/feed.xml", layout: false
 #   page "/admin/*"
 # end
 
+page "/feed.xml", layout: false
+page "/", layout: 'layout/home'
+page "/blogs.html", layout: 'layout'
+
 # Proxy pages (http://middlemanapp.com/dynamic-pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
@@ -69,8 +73,6 @@ page "/feed.xml", layout: false
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-# Reload the browser automatically whenever files change
-# activate :livereload
 activate :syntax
 set :markdown_engine, :kramdown
 
@@ -89,10 +91,16 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
-# Activate Disqus extension
+set :fonts_dir,  "fonts-folder"
+
+
 activate :disqus do |d|
   d.shortname = "bluevajra"
-  end
+end
+
+configure :development do
+  activate :livereload
+end
 
 # Build-specific configuration
 configure :build do
@@ -111,5 +119,13 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 
-  
+
+end
+
+require 'digest/md5'
+helpers do
+  def gravatar_for(email)
+    hash = Digest::MD5.hexdigest(email.chomp.downcase)
+    "http://www.gravatar.com/avatar/#{hash}"
+  end
 end

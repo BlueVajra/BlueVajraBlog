@@ -14,57 +14,10 @@ header h2{
   //color:white
 }
 
-article{
-  h2{
-    font-size:2em;
-    padding-top:0;
-    margin-bottom:0;
-  }
-  aside{
-    font-family: 'Lato';
-    color:#2b303b;
-    font-size:1.25em;
-    line-height: 1.25em;
-    text-align:right;
-    padding-top:.75em;
-    time{
-      //width:50px;
-      position:relative;
-      float:right;
-      margin-right:60px;
-      top:-5px;
-      .day{
-        display:block;
-        position:absolute;
-        width:50px;
-        left:-10px;
-        top:0px;
-        font-weight:900;
-        font-size:1.5em;
-        text-align:right;
-      }
-      .month{
-        display:block;
-        position:absolute;
-        width:50px;
-        left:-10px;
-        text-transform:uppercase;
-        top:25px;
-        text-align:right;
-      }
-      .year{
-        display:block;
-        position:absolute;
-        //right:15px;
-        color:#c0c5ce;
-        left:27px;
-        top:11px;
-        font-weight:100;
-        @include transform(rotate(-90deg));
-      }
-    }
-    //@include transform(translateY(50px));
-  }
+
+
+.blog_main{
+
 }
 
 aside.sideContent blockquote{
