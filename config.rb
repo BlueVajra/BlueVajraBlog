@@ -122,10 +122,10 @@ configure :build do
 
 end
 
-require 'digest/md5'
-helpers do
-  def gravatar_for(email)
-    hash = Digest::MD5.hexdigest(email.chomp.downcase)
-    "http://www.gravatar.com/avatar/#{hash}"
-  end
-end
+#require 'digest/md5'
+#helpers do
+#  def gravatar_for(email)
+#    hash = Digest::MD5.hexdigest(email.chomp.downcase)
+#    "http://www.gravatar.com/avatar/#{hash}"
+#  end
+#end

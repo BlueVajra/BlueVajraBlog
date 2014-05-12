@@ -61,7 +61,7 @@ section.mainContent {
       width:4em;
     }
     p{
-      @include span-columns(5 of 7);
+//      @include span-columns(5 of 7);
       font-size:1.2em;
       line-height: 1.5em;
     }
