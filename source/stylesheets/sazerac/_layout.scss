@@ -56,12 +56,8 @@ section.mainContent {
   }
   .media{
     margin-top:2em;
-    .gravitar{
-      @include span-columns(2 of 7);
-      width:4em;
-    }
+
     p{
-      @include span-columns(5 of 7);
       font-size:1.2em;
       line-height: 1.5em;
     }

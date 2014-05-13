@@ -16,13 +16,7 @@ use Rack::TryStatic,
     :try => ['.html', 'index.html', '/index.html']
 
 # Serve a 404 page if all else fails
-run lambda { |env|
-  [
-    404,
-    {
-      "Content-Type"  => "text/html",
-      "Cache-Control" => "public, max-age=60"
-    },
-    File.open("tmp/404/index.html", File::RDONLY)
-  ]
+run lambda{ |env|
+  four_oh_four_page = File.expand_path("../build/404/index.html", __FILE__)
+  [ 404, { 'Content-Type'  => 'text/html'}, [ File.read(four_oh_four_page) ]]
 }
