@@ -41,6 +41,7 @@ section.blogContent {
         @include span-columns(5 of 6);
         @include shift(1)
       }
+
       aside {
         @include span-columns(1 of 6);
         @include shift(-6);
@@ -90,6 +91,7 @@ section.blogContent {
       }
     }
     @include media(max-width $large-screen) {
+
       time{
         border-radius:3px;
         background-color: rgba(0,0,0,.1);
@@ -105,6 +107,51 @@ section.blogContent {
         content: ', ';
       }
 
+    }
+
+
+    @include media(min-device-width 320px max-device-width 768px, 6) {
+      @include span-columns(6);
+
+      h2, section {
+        padding-left:25px;
+      }
+
+      time {
+        position: relative;
+        float: right;
+        margin-right: 100px;
+        top: -5px;
+        .day {
+          display: block;
+          position: absolute;
+          width: 100px;
+          left: -20px;
+          top: 0px;
+          font-weight: 900;
+          font-size: 1.5em;
+          text-align: right;
+        }
+        .month {
+          display: block;
+          position: absolute;
+          width: 100px;
+          left: -20px;
+          text-transform: uppercase;
+          top: 50px;
+          text-align: right;
+        }
+        .year {
+          display: block;
+          position: absolute;
+          //right:15px;
+          color: #c0c5ce;
+          left: 54px;
+          top: 22px;
+          font-weight: 100;
+          @include transform(rotate(-90deg));
+        }
+      }
     }
 
   }
@@ -142,6 +189,9 @@ section.blogContent {
       float: left;
       padding: .3em;
       padding-left: .5em;
+    }
+    @include media(min-device-width 320px max-device-width 768px, 6) {
+      @include span-columns(6);
     }
   }
 }

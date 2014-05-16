@@ -20,6 +20,10 @@ header.navigation {
   width: 100%;
   z-index: 999;
 
+  @include media(min-device-width 320px max-device-width 768px) {
+    height: $navigation-height*2;
+  }
+
   .menu-wrapper {
     @include outer-container;
     @include clearfix;
@@ -64,6 +68,18 @@ header.navigation {
     @include media ($horizontal-bar-mode) {
       display: none;
     }
+    @include media(min-device-width 320px max-device-width 768px,12) {
+      color: $navigation-color;
+      cursor: pointer;
+      display: block;
+      float: right;
+      font-family: $sans-serif;
+      font-weight: 700;
+      line-height: $navigation-height*2;
+      margin: 0;
+      padding-right: 1em;
+      text-transform: uppercase;
+    }
 
     &:hover {
       color: $navigation-color-hover;
@@ -75,6 +91,10 @@ header.navigation {
     float: none;
     @include media ($horizontal-bar-mode) {
       float: left;
+    }
+    @include media(min-device-width 320px max-device-width 768px) {
+      z-index: 9999999;
+      float: none;
     }
   }
 
@@ -92,6 +112,16 @@ header.navigation {
       display: inline;
       margin: 0;
       padding: 0;
+    }
+    @include media(min-device-width 320px max-device-width 768px) {
+      clear: both;
+      -webkit-transform-style: preserve-3d; // stop webkit flicker
+      display: none;
+      margin: 0 auto;
+      overflow: visible;
+      padding: 0;
+      width: 100%;
+      z-index: 9999;
     }
   }
 
@@ -112,6 +142,16 @@ header.navigation {
       padding-right: 2em;
       text-decoration: none;
       width: auto;
+    }
+    @include media(min-device-width 320px max-device-width 768px) {
+      background: $navigation-background;
+      display: block;
+      line-height: $navigation-height*2;
+      overflow: hidden;
+      padding-right: .8em;
+      text-align: right;
+      width: 100%;
+      z-index: 9999;
     }
 
     a {
@@ -145,6 +185,15 @@ header.navigation {
       float: right;
       clear: none;
     }
+    @include media(min-device-width 320px max-device-width 768px) {
+      @include clearfix;
+      display: block;
+      padding-right: $navigation-padding;
+      padding-left: $navigation-padding;
+      clear: both;
+      background: #505050;
+      float:none;
+    }
   }
 
   ul#social-menu{
@@ -168,6 +217,15 @@ header.navigation {
       line-height: $navigation-height;
       width: auto;
     }
+    @include media(min-device-width 320px max-device-width 768px) {
+      background: transparent;
+      display: inline;
+      line-height: $navigation-height*2;
+      overflow: hidden;
+      padding:0 .5em;
+      z-index: 9999;
+      font-size:2em;
+    }
 
     a {
       font-weight: 400;
@@ -181,6 +239,9 @@ header.navigation {
   margin-bottom:3em;
   @include media ($horizontal-bar-mode) {
     margin-bottom:0;
+  }
+  @include media(min-device-width 320px max-device-width 768px) {
+    margin-bottom:3em;
   }
 
 }

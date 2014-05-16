@@ -26,10 +26,17 @@
     @include span-columns(4);
     @include omega(3n);
   }
+  @include media(min-device-width 320px max-device-width 768px, 4) {
+    @include span-columns(4);
+    font-size:1.5em;
+  }
 
   .card-image {
     overflow: hidden;
     max-height: 150px;
+    @include media(min-device-width 320px max-device-width 768px) {
+      max-height: 300px;
+    }
 
     img {
       width: 100%;
