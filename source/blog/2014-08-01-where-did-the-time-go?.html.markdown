@@ -4,7 +4,7 @@ date: 2014-08-01 22:06 UTC
 tags: recap
 ---
 
-I can hardly believe we are approaching the end of our time together here at gSchool. I barely remember week one, it seems so long ago. We are out there applying and interviewing with jobs, working on multiple personal projects and trying to get a little bet of life enjoyment out there... it has been a beautiful summer.
+I can hardly believe we are approaching the end of our time together here at gSchool. I barely remember week one, it seems so long ago. We are out there applying and interviewing with jobs, working on multiple personal projects and trying to get a little bit of life enjoyment out there... it has been a beautiful summer.
  
 I have been all over the place in recent weeks. I built a small web API server in Go, which was my first foray into a language of that caliber. I was pretty happy with my time spent there. It is a fun language to write in, with some cool functionality I had never seen before. You can check out my repo on [GitHub] (https://github.com/BlueVajra/task_api).
 
