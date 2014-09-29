@@ -69,7 +69,9 @@ section.mainContent {
     @include shift(1)
   }
   .media {
-    margin-top: 2em;
+    margin-top: 1em;
+
+    h4{margin-top:1em;}
 
     p {
       font-size: 1.2em;
@@ -77,10 +79,10 @@ section.mainContent {
     }
   }
 
-  ul {
+  ul#social-menu {
     padding-left: 0;
 
-    margin: 3em auto;
+    margin: 1em auto;
     overflow: hidden;
     text-align: center;
 
